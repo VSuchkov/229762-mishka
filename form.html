@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Мишка</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<h1 class="visually-hidden"></h1>
 		<div class="logo ">
-			<img src="" width="86" height="35" alt="Мишка">
+			<a href="index.html">
+				<img src="" width="86" height="35" alt="Мишка">
+			</a>
 		</div>
 		<header class="page-header">
 			<nav class="main-nav main-nav--closed main-nav-nojs">
@@ -16,7 +18,7 @@
 				</button>
 				<ul class="main-nav__items">
 					<li class="main-nav__item">
-						<a href="#">
+						<a href="catalog.html">
 							Каталог товаров
 						</a>
 					</li>
@@ -105,13 +107,13 @@
 						<label for="patronymic">Отчество</label>
 						<input id="patronymic" type="text" value="Отчество, если желаете">
 					</fieldset>
-					<fieldset class="order-form__contacts">
-						<label for="tel">ТЕЛ</label>
+					<fieldset class="order-form__phone">
+						<label for="tel">Тел</label>
 						<input type="tel" name="tel" value="+7 XXX XX XX*" required>
 					</fieldset>
 					<fieldset class="order-form__e-mail">
-						<label for="e-mail">тел</label>
-						<input type="e-mail" name="e-mail" value="Ваш Email*" required>
+						<label for="e-mail">E-mail</label>
+						<input type="e-mail" name="e-mail" value="Ваш E-mail*" required>
 					</fieldset>
 					<fieldset class="order-form__comment">
 						<label for="reviev">
