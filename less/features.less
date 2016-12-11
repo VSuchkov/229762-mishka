@@ -1,23 +1,99 @@
 .features {
-  background-image: url("");
-  &__title-descr {
-    font-size: 27px;
-    line-height: 30px;
+  height: 489px;
+  .container();
+  background-image: url("../img/hero-mobile@1x.jpg") no-reprat;
+  & a {
+    color: #ffffff;
+    text-decoration: none;
   }
-  &__item {
-    font-size: 19px;
-    line-height: 24px;
-    & a {
-      color: #ffffff;
-      text-decoration: none;
+}
+.features__title-descr {
+  text-align: center;
+  .clearfix();
+  width: 260px;
+  font-size: 27px;
+  line-height: 1.11em;
+  padding-top: 72px;
+  padding-bottom: 120px;
+}
+.features__item {
+  .clearfix();
+  font-size: 19px;
+  line-height: 24px;
+  &--home-furnishings a {
+    display: block;
+    width: 320px;
+    height: 100px;
+    background-color: #63d1bb;
+    backgrond-image: url("");
+    margin-left: -30px;
+  }
+  &--kids-toys a {
+    display: block;
+    width: 320px;
+    height: 100px;
+    background-color: #56c3b2;
+    backgrond-image: url("");
+    margin-left: -30px;
+  }
+}
+@media @tablet-width {
+  .features {
+    width: 668px;
+    min-height: 690px;
+    .clearfix();
+  }
+  .features__title-descr {
+    width: 500px;
+    padding-top: 100px;
+    margin: 0 auto;
+    margin-bottom: 290px;
+  }
+  .features__item {
+    &--home-furnishings {
+      float: left;
+    }
+    &--kids-toys {
+      float: right;
     }
     &--home-furnishings a {
-      background-color: #63d1bb;
-      backgrond-image: url("");      
+      width: 300px;
+      padding-left: 34px;
+      min-height: 120px;
+      margin-left: 0;
     }
     &--kids-toys a {
-      background-color: #56c3b2;
-      backgrond-image: url("");
+      width: 300px;
+      padding-left: 34px;
+      min-height: 120px;
+      margin-left: 0;
+    }
+  }
+}
+@media @desktop-width {
+  .features {
+    width: 1050px;
+  }
+  .features__title-descr {
+    width: 1050px;
+    padding-top: 100px;
+  }
+  .features__item {
+    &--home-furnishings {
+      float: left;
+    }
+    &--kids-toys {
+      float: right;
+    }
+    &--home-furnishings a {
+      width: 485px;
+      padding-left: 40px;
+      min-height: 120px;
+    }
+    &--kids-toys a {
+      width: 485px;
+      padding-left: 40px;
+      min-height: 120px;
     }
   }
 }

@@ -1,0 +1,83 @@
+.reviews {
+  .container();
+  width: 260px;
+  height: 550px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.reviews__item {
+  margin: 0;
+}
+.reviews__title {
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.reviews__text {
+  font-size: 15px;
+  text-align: left;
+  line-height: 30px;
+  color: #444444;
+  margin-bottom: 30px;
+}
+.reviews__authors-name {
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.reviews__authors-contact {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.reviews__write {
+  margin-bottom: 40px;
+  margin-top: 35px;
+}
+
+@media @tablet-width {
+  .reviews {
+    .clearfix();
+    height: 400px;
+    padding-top: 85px;
+    padding-bottom: 50px;
+    background-image: url("img/reviev1@x.jpg") no-repeat;
+    width: 668px;
+  }
+  .reviews__title {
+    width: 200px;
+    margin-bottom: 60px;
+  }
+  .reviews__text {
+    width: 660px;
+    margin-bottom: 65px;
+  }
+  .reviews__authors-name {
+  }
+  .reviews__authors-contact {
+  }
+  .reviews__write {
+    position: absolute;
+    float: right;
+    top: 80px;
+    right: 20px;
+  }
+  .reviews__prev,
+  .reviews__next {
+    float: right;
+  }
+}
+@media @desktop-width {
+  .reviews {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    padding-left: 175px;
+    background-image: url("../img/reviev1@x.jpg") no-repeat;
+    width: 875px;
+  }
+
+}

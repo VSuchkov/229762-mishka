@@ -1,0 +1,36 @@
+.page-header {
+  min-height: 396px;
+  .container();
+}
+.page-header__logo {
+  width: 260px;
+  height: 80px;
+}
+@media @tablet-width {
+  .page-header {
+    width: 668px;
+    min-height: 150px; /* минимальная высота содержания */
+    padding-bottom: 60px;
+    .clearfix();
+  }
+  .page-header__logo {
+  float: left;
+  width: 320px;
+  }
+}
+@media @desktop-width {
+  .page-header {
+  .container();
+  position: relative;
+    width: 1050px;
+    height: 90px;
+  }
+  .page-header__logo {
+  position: absolute;
+  left: 50%;
+}
+}
+.page-header,
+.page-header__logo {
+  .no-outline();
+}

@@ -1,29 +1,120 @@
 .week-item {
-  &__name {
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: bold;
+  .container();
+  .clearfix();
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+.week-item__name {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.week-item__sign {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #63d1bb;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.week-item__descr {
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+  margin-bottom: 30px;
+}
+.week-item__table {
+  width: 260px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #444444;
+  margin-bottom: 25px;
+}
+.week-item__price {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.week-item__specification {
+  width: 90px;
+  height: 40px;
+}
+.week-item__specification-value {
+  width: 170px;
+  height: 40px;
+}
+@media @tablet-width {
+  .week-item {
+    width: 668px;
+    height: 610px;
+    padding-top: 50px;
   }
-  &__sign {
-    font-size: 17px;
-    line-height: 16px;
-    font-weight: bold;
-    color: #63d1bb;
-    text-transform: uppercase;
+  .week-item__name {
+    float: left;
+    width: 500px;
   }
-  &__descr {
-    font-size: 15px;
-    line-height: 24px;
-    color: #444444;
+  .week-item__sign {
+    float: right;
+    width: 165px;
   }
-  &__table {
-    font-size: 15px;
-    line-height: 20px;
-    color: #444444;
+  .week-item__descr {
+    width: 290px;
+    margin-bottom: 50px;
   }
-  &__price {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: bold;
+  .week-item__table {
+    float: left;
+    width: 290px;
+    margin-bottom: 50px;
+  }
+  .week-item img {
+    float: right;
+    width: 334px;
+    height: 400px;
+    margin-top: -110px;
+  }
+  .week-item__price {
+    float: left;
+    width: 290px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .week-item__order {
+    float: left;
+  }
+}
+@media @desktop-width {
+  .week-item {
+    padding-left: 175px;
+    width: 875px;
+    position: relative;
+  }
+  .week-item__sign {
+    position: absolute;
+    top: 80px;
+    left: 0;
+  }
+  .week-item__name {
+    width: 525px;
+    margin-bottom: 50px;
+  }
+  .week-item__descr {
+    margin-bottom: 55px;
+  }
+  .week-item__table {
+    width: 290px;
+    margin-bottom: 110px;
+  }
+  .week-item img {
+    float: right;
+    width: 525px;
+    height: 635px;
+    margin-top: -250px;
+    z-index: 0;
+  }
+  .week-item__price {
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
