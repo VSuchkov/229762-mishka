@@ -1,21 +1,40 @@
 .page-header {
-  min-height: 396px;
   .container();
+  display: flex;
+  flex-direction: column;
+  border-top: 1px #ececec solid;
+  border-bottom: 1px #ececec solid;
 }
 .page-header__logo {
-  width: 260px;
-  height: 80px;
+
+  min-height: 78px;
+
+  margin: auto;
+  text-align: center;
+  & img {
+    width: 86px;
+    height: 35px;
+    margin-top: 20px;
+  }
 }
 @media @tablet-width {
   .page-header {
     width: 668px;
-    min-height: 150px; /* минимальная высота содержания */
-    padding-bottom: 60px;
-    .clearfix();
+    margin: 0;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    /*.clearfix();*/
+    flex-direction: row;
+    .container();
   }
   .page-header__logo {
-  float: left;
-  width: 320px;
+
+
+    /*float: left;*/
+    width: auto;
+    margin: 0;
   }
 }
 @media @desktop-width {

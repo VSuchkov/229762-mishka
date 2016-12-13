@@ -23,6 +23,7 @@
 }
 .reviews__authors-name {
   font-weight: bold;
+  font-style: normal;
   text-align: left;
   font-size: 18px;
   line-height: 24px;
@@ -33,6 +34,8 @@
   line-height: 24px;
   margin-bottom: 30px;
   text-align: left;
+  color: #444444;
+  font-weight: normal;
 }
 .reviews__write {
   margin-bottom: 40px;
@@ -41,29 +44,42 @@
 
 @media @tablet-width {
   .reviews {
+    .container();
     .clearfix();
+    position: relative;
     height: 400px;
-    padding-top: 85px;
+    padding-top: 80px;
     padding-bottom: 50px;
-    background-image: url("img/reviev1@x.jpg") no-repeat;
+    background-image: url(../img/review@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
     width: 668px;
+    padding-left: 50px;
+    margin-left: 120px;
   }
   .reviews__title {
     width: 200px;
-    margin-bottom: 60px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 43px;
+    line-height: 50px;
   }
   .reviews__text {
     width: 660px;
     margin-bottom: 65px;
+    font-size: 17px;
   }
   .reviews__authors-name {
+    font-size: 17px;
   }
   .reviews__authors-contact {
+    font-size: 17px;
   }
-  .reviews__write {
+  .reviews .reviews__write {
     position: absolute;
     float: right;
-    top: 80px;
+    width: 170px;
+    top: 40px;
     right: 20px;
   }
   .reviews__prev,
@@ -73,11 +89,21 @@
 }
 @media @desktop-width {
   .reviews {
+    .container();
     padding-top: 80px;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
     padding-left: 175px;
     background-image: url("../img/reviev1@x.jpg") no-repeat;
     width: 875px;
+  }
+  .reviews__title {
+   font-size: 53px;
+   line-height: 57px;
+  }
+  .reviews__text {
+    width: 760px;
+    margin-bottom: 65px;
+    font-size: 17px;
   }
 
 }
