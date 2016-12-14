@@ -4,24 +4,23 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/blocks.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__logo">
-        <a href="index.html">
-          <img src="" width="86" height="35" alt="Мишка">
+        <a  href="index.html">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
       </div>
-      <nav class="main-nav main-nav--closed main-nav-nojs">
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           Открыть меню
         </button>
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <span>
+            <a>
               Каталог товаров
-            </span>
+            </a>
           </li>
           <li class="main-nav__item">
             <a href="form.html">
@@ -30,17 +29,17 @@
           </li>
         </ul>
         <ul class="main-nav__user-items">
-          <li class="main-nav__user-item">
+          <li class="main-nav__user-item main-nav__user-item--search">
             <label for="search">
               Поиск по сайту
             </label>
             <input type="search" name="search">
-            </li>
-            <li class="main-nav__user-item">
-              <a href="#" class="main-nav__user-basket">
-                Корзина: пока пуста
-              </a>
-            </li>
+          </li>
+          <li class="main-nav__user-item">
+            <a href="#" class="main-nav__user-basket" title="Корзина">
+              Корзина: пока пуста
+            </a>
+          </li>
           </ul>
         </nav>
       </header>
@@ -51,38 +50,44 @@
       <div class="catalog-items">
         <div class="catalog-items__item">
           <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-items--item-title">
-            Зайчик-попрыгайчик
-          </h2>
-          <span class="catalog-items__description">
-            Рост 30 см, вес 200 г
-          </span>
-          <div class="catalog-items__price">
-            1200 руб.
+          <div class="catalog-items__text-wrapper">
+            <h2 class="catalog-items--item-title">
+              Зайчик-попрыгайчик
+            </h2>
+            <span class="catalog-items__description">
+              Рост 30 см, вес 200 г
+            </span>
+            <div class="catalog-items__price">
+              1200 руб.
+            </div>
           </div>
         </div>
         <div class="catalog-items__item">
           <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-items--item-title">
-            Корзинка для белья
-          </h2>
-          <span class="catalog-items__description">
-            Диаметр 15 см, высота 10 см
-          </span>
-          <div class="catalog-items__price">
-            690 руб.
+          <div class="catalog-items__text-wrapper">
+            <h2 class="catalog-items--item-title">
+              Корзинка для белья
+            </h2>
+            <span class="catalog-items__description">
+              Диаметр 15 см, высота 10 см
+            </span>
+            <div class="catalog-items__price">
+              690 руб.
+            </div>
           </div>
         </div>
         <div class="catalog-items__item">
           <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-items--item-title">
-            Большая корзина для игрушек
-          </h2>
-          <span class="catalog-items__description">
-            Диаметр 30 см, высота 30 см
-          </span>
-          <div class="catalog-items__price">
-            1500 руб.
+          <div class="catalog-items__text-wrapper">
+            <h2 class="catalog-items--item-title">
+              Большая корзина для игрушек
+            </h2>
+            <span class="catalog-items__description">
+              Диаметр 30 см, высота 30 см
+            </span>
+            <div class="catalog-items__price">
+              1500 руб.
+            </div>
           </div>
         </div>
       </div>
@@ -91,8 +96,9 @@
           Процесс производства
         </h2>
         <video src="#" poster="img/video-mobile@1x.jpg" preload="metadata" width="260" height="150" controls>
+        </video>
         <p class="production-process__text">
-          По просьбам наших либимых фолловеров мы сняли для вас подробное видео о тм, как появляются наши товары.
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
         <a href="#" class="production-process__order btn">
           Сделать заказ
@@ -100,17 +106,40 @@
       </div>
     </main>
     <footer class="page-footer">
-      <p class="social">
-        <span class="social__links">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-      </span>
-      </p>
-      <p class="page-footer__copyright">
-        Разработано:
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </p>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a>
+           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+         </a>
+        </div>
+        <p class="social">
+          <span class="social__links">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </p>
+      </div>
     </footer>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

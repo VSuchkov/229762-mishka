@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/blocks.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -13,8 +12,7 @@
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
       </div>
-      <nav class="main-nav main-nav--closed main-nav-nojs">
-
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           Открыть меню
         </button>
@@ -31,19 +29,18 @@
           </li>
         </ul>
         <ul class="main-nav__user-items">
-          <li class="main-nav__user-item">
+          <li class="main-nav__user-item main-nav__user-item--search">
             <label for="search">
               Поиск по сайту
             </label>
             <input type="search" name="search">
-            </li>
-            <li class="main-nav__user-item">
-              <a href="#" class="main-nav__user-basket" title="Корзина">
-                Корзина: пока пуста
-              </a>
-            </li>
+          </li>
+          <li class="main-nav__user-item">
+            <a href="#" class="main-nav__user-basket" title="Корзина">
+              Корзина: пока пуста
+            </a>
+          </li>
           </ul>
-
         </nav>
       </header>
       <main>
@@ -51,16 +48,12 @@
           <h1 class="features__title-descr">
             Милые штучки ручной работы для дома
           </h1>
-          <div class="features__item features__item--home-furnishings">
-          <a href="#">
+          <a class="features__item features__item--home-furnishings" href="#">
             Предметы интерьера
           </a>
-          </div>
-          <div class="features__item features__item--kids-toys">
-          <a href="#">
+          <a class="features__item  features__item--kids-toys" href="#">
             Детские игрушки
           </a>
-        </div>
       </div>
       <div class="week-item">
         <h2 class="week-item__name">
@@ -88,7 +81,7 @@
             <td class="week-item__specification-value">15см</td>
           </tr>
         </table>
-        <img src="" width="260" height="315" alt="Вязаные корзинки">
+        <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         <b class="week-item__price">
           Цена: 990 руб.
         </b>
@@ -100,23 +93,25 @@
         <h2 class="about-us__title">
           Коротко о нас:
         </h2>
-        <div class="about-us__item about-us__item--materials">
-          Экологически чистые материалы
-        </div>
-        <div class="about-us__item about-us__item--russian-price">
+        <div class="about-us__items">
+          <div class="about-us__item about-us__item--materials">
+            Экологически чистые материалы
+          </div>
+          <div class="about-us__item about-us__item--russian-price">
             Скандинавский стиль по российской цене
-        </div>
-        <div class="about-us__item about-us__item--likes">
+          </div>
+          <div class="about-us__item about-us__item--likes">
             Увеличивает лайки на фотографиях
-        </div>
-        <div class="about-us__item about-us__item--hand-made">
+          </div>
+          <div class="about-us__item about-us__item--hand-made">
             Связано вручную с любовью и умилением
-        </div>
-        <div class="about-us__item about-us__item--our-manufacturer">
+          </div>
+          <div class="about-us__item about-us__item--our-manufacturer">
             Поддержка отечественного производителя
-        </div>
-        <div class="about-us__item about-us__item--gift-package">
+          </div>
+          <div class="about-us__item about-us__item--gift-package">
             Поставляется в подарочной упаковке
+          </div>
         </div>
       </div>
       <div class="reviews">
@@ -163,7 +158,7 @@
         <table class="contacts__table contacts__table--adress">
           <tr>
             <td class="contacts__adress">
-              адрес
+              адрес:
             </td>
             <td class="contacts__adress-value">
               г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
@@ -172,7 +167,6 @@
         </table>
         </div>
         <div class="contacts__map">
-          <img src="img/map-mobile@1x.jpg" height="457" width="320">
         </div>
         <a class="contacts__write btn" href="">
           Напишите нам
@@ -180,19 +174,40 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="footer-logo visually-hidden">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a>
+           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+         </a>
+        </div>
+        <p class="social">
+          <span class="social__links">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </p>
       </div>
-      <p class="social">
-        <span class="social__links">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-      </span>
-      </p>
-      <p class="page-footer__copyright">
-        Разработано:
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </p>
     </footer>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

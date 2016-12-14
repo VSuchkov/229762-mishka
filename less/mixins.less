@@ -8,29 +8,25 @@
 .container() {
   width: 260px;
   margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 668px;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1150px) {
-  .container {
-    width: 1050px;
-    margin: 0 auto;
-  }
-}
   @media @tablet-width {
     width: 668px;
   }
   @media @desktop-width {
     width: 1050px;
   }
+}
 .no-outline() {
   outline: none;
   background: transparent;
   &::before {
     display: none;
+  }
+}
+.container-fluid() {
+  width: auto;
+  @media @tablet-width {
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
