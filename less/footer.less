@@ -2,9 +2,8 @@
 
   background-color: #f1f1f1;
   width: auto;
-  min-height: 160px;
   margin: 0;
-  margin-top: 55px;
+  margin-top: 40px;
 }
 .page-footer__wrapper {
   .container();
@@ -12,47 +11,118 @@
 .page-footer__logo {
   display: none;
 }
-.social {
-  padding: 20px 50px;
-  height: 80px;
+.page-footer__logo {
+  & a:hover .page-footer__logo-img path {
+    fill: #46c1ae;
+  }
+  & a:active .page-footer__logo-img path {
+    fill: #bde3dd;
+  }
 }
+
 .visually-hidden {
   display: none;
 }
-.page-footer__copyright {
+.page-footer__copyright-link {
+  display: flex;
+  height: 79px;
+  padding-left: 39px;
+  padding-right: 39px;
+  align-items: center;
   font-size: 19px;
+  justify-content: space-between;
+  color: #000000;
+  text-decoration: none;
   font-weight: 18px;
   font-weight: bold;
   border-top: 1px #e5e5e5 solid;
-  padding: 20px 35px;
+  width: 182px;
+  margin: auto;
 }
-.page-footer__copyright-link {
-  background-image: url("");
+.page-footer__copyright-link:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+.social {
+  margin: 0;
+}
+.social__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 141px;
+  height: 80px;
+  margin: auto;
+}
+
+.social__link {
+  font-size: 0;
+}
+.social__link--in {
+  width: 22px;
+  height: 21px
+}
+.social__link--fb {
+  width: 15px;
+  height: 29px;
+}
+.social__link--tw {
+  width: 24px;
+  height: 20px;
+}
+.social__link--tw:hover path{
+  fill: #46c1ae;
+}
+.social__link--tw:active path{
+  fill: #bde3dd;
+}
+.social__link--in:hover path{
+  fill: #46c1ae;
+}
+.social__link--in:active path{
+  fill: #bde3dd;
+}
+.social__link--fb:hover path{
+  fill: #46c1ae;
+}
+.social__link--fb:active path{
+  fill: #bde3dd;
+}
+.page-footer__copyright-link svg{
+  width: 27px;
+  height: 34px;
+}
+.page-footer__copyright-link path {
+  fill: #63d1bb;
+}
+.page-footer__copyright-link:hover path {
+  fill: #46c1ae;
+}
+.page-footer__copyright-link:active path {
+  fill: rgba(70, 193, 174, 0.3);
+}
+.page-footer__hidden-text {
+  font-size: 0;
 }
 @media @tablet-width {
   .page-footer__wrapper {
     .container();
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 768px;
     height: 144px;
   }
   .page-footer__logo {
     display: block;
     width: 110px;
-    margin-top: auto;
-    margin-bottom: auto;
   }
-  .social {
-    margin-top: auto;
-    margin-bottom: auto;
-    max-width: 200px;
-    padding: 0;
+  .social__links {
+    margin: 0;
   }
-  .page-footer__copyright {
-    margin-top: auto;
-    margin-bottom: auto;
-    max-width: 220px;
+  .page-footer__copyright-link {
+    width: 183px;
+    border: none;
+    margin: 0;
     padding: 0;
   }
 }

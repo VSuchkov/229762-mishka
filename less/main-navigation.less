@@ -1,6 +1,4 @@
 .main-nav {
-  /*display: flex;
-  flex-direction: column;*/
   display: flex;
   flex-direction: column;
   position: relative;
@@ -8,15 +6,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-
-  /*margin: 0 auto;*/
 }
-/*
-.main-nav__item a,
-.main-nav__user-item {
-
+.main-nav__item--only-desktop {
+  display: none;
 }
-*/
 .main-nav__items,
 .main-nav__user-items {
   display: flex;
@@ -47,12 +40,14 @@
   }
 }
 .main-nav__user-basket {
-  text-decoration: none;
-  color: #000000;
-  &:hover {
+  & a {
+    text-decoration: none;
+    color: #000000;
+  }
+  &:hover a{
     color: rgba(0, 0, 0, 0.6);
   }
-  &:active {
+  &:active a{
     color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -60,49 +55,49 @@
   position: relative;
 
 }
-.main-nav__user-item--search,
+.main-nav__user-item-search,
 .main-nav__user-basket {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 21px;
-    height: 21px;
 
+}
+.main-nav__user-item-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+}
+.main-nav__user-item-search:hover {
+  & .main-nav__user-item-search-icon path {
+  fill: #63d1bb;
   }
 }
-.main-nav__user-item--search input {
+.main-nav__user-item-search:active {
+  & .main-nav__user-item-search-icon path {
+  fill: rgba(99, 209, 187, 0.3);
+  }
+}
+.main-nav__user-basket-icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+}
+.main-nav__user-basket:hover {
+  & .main-nav__user-basket-icon path {
+  fill: #63d1bb;
+  }
+}
+.main-nav__user-basket:active {
+  & .main-nav__user-basket-icon path {
+  fill: rgba(99, 209, 187, 0.3);
+  }
+}
+
+
+.main-nav__user-item-search input {
   display: none;
 }
-.main-nav__user-item--search {
-  &::before {
-    background-image: url("");
-    background-position: ;
-    &:hover {
-      background-image: url("");
-      background-position: ;
-    }
-    &:active {
-      background-image: url("");
-      background-position: ;
-    }
-  }
+.main-nav__user-item-search {
+
 }
-.main-nav__user-basket {
-  &::before {
-    background-image: url("");
-    background-position: ;
-    &:hover {
-      background-image: url("");
-      background-position: ;
-    }
-    &:active {
-      background-image: url("");
-      background-position: ;
-    }
-  }
-}
+
 
 
 .main-nav__toggle {
@@ -185,34 +180,34 @@
   .main-nav--nojs .main-nav__user-items {
     display: block;
   }
+  .main-nav__delivery--mobile-hidden {
+    display: none;
+  }
 }
 
 
 @media @tablet-width {
   .main-nav {
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .main-nav__toggle {
     display: none;
   }
-  .main-nav__user-item--search {
-    font-size: 0;
-    background-color: yellow;/*временно*/
-  }
+
     .main-nav__items {
-    position: absolute;
-    top: 80px;
-    left: -487px;
+    order: 2;
     flex-direction: row;
-    /* float: left; */
-    width: 334px;
+    border-top: 1px #e7e7e7 solid;
+    width: 340px;
     min-height: 70px;
   }
 
   .main-nav__user-items {
-    /*float: right;*/
+    margin-left: auto;
     width: 334x;
-    min-height: 70px; /* Временно для сетки */
+    min-height: 70px;
+    border-bottom: none; /* Временно для сетки */
   }
     .main-nav__items,
     .main-nav__user-items {
@@ -221,11 +216,10 @@
 
   .main-nav__item a,
   .main-nav__user-item {
+    font-size: 15px;
+    line-height: 24px;
     background-color: #ffffff;
-    width: auto;
     display: block;
-    padding-top: 27px;
-    padding-bottom: 27px;
     padding-left: 0;
     margin-left: 0;
   }
@@ -239,22 +233,67 @@
   .main-nav__user-item {
     border-left: 1px #ececec solid;
   }
+  .main-nav__delivery {
+    display: block;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    height: 78px;
+    width: 328px;
+    text-align: right;
+    order: 3;
+
+
+  }
+  .main-nav__user-item-search {
+    font-size: 0;
+
+    width: 82px;
+  }
+  .main-nav__delivery--mobile-hidden {
+    display: block;
+  }
+  .main-nav__user-basket {
+    text-align: right;
+  }
+  .main-nav__user-basket-icon {
+
+  }
 }
+
 @media @desktop-width {
   .main-nav {
-    float: none;
     width: 1050px;
+    border-bottom: 1px #e7e7e7 solid;
+  }
+  .main-nav__item {
+    border-bottom: 1px #e7e7e7 solid;
+  }
+  .main-nav__item--only-desktop {
+    display: block;
+    border: none;
   }
   .main-nav__items {
     width: 420px;
     min-height: 89px;
-    float: left;
-    position: static;
+    order: -1;
+    flex-wrap: wrap;
+  }
+  .main-nav__item a {
+    width: 175px;
+    height: 34px;
   }
   .main-nav__user-items {
-    float: right;
-    position: static;
     width: 350px;
+  }
+  .main-nav__user-item {
+    height: 25px;
+    border-bottom: none;
+  }
+  .main-nav__delivery  {
+    margin-left: auto;
+    margin-top: -60px;
   }
 }
 
