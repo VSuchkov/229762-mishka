@@ -1,7 +1,7 @@
 .about-us {
   .container();
-  padding-top: 30px;
-  height: 900px;
+  padding-top: 14px;
+  height: 796px;
 }
 .about-us__title {
     font-size: 25px;
@@ -9,44 +9,46 @@
     font-weight: bold;
   }
 .about-us__item {
-    height: 50px;
-    padding-top: 55px;
+    height: 59px;
+    padding-top: 64px;
     font-weight: bold;
     font-size: 17px;
+    line-height: 20px;
   }
 .about-us__item {
   background-repeat: no-repeat;
-  background-position: 0 0;
   &--materials {
     background-image: url(../img/icon-feature-1.svg);
+    background-position: 9px 10px;
 
   }
   &--russian-price {
-    background-image: url(../img/icon-feature-2.svg);
-    background-position: 0 0;
+    background-image: url(../img/icon-feature-3.svg);
+    background-position: 1px 11px;
   }
   &--likes {
-    background-image: url(../img/icon-feature-3.svg);
-    background-position: 0 0;
+    background-image: url(../img/icon-feature-5.svg);
+    background-position: 9px 15px;
   }
   &--hand-made {
-    background-image: url(../img/icon-feature-4.svg);
-    background-position: 0 0;
+    background-image: url(../img/icon-feature-2.svg);
+    background-position: 5px 13px;
   }
   &--our-manufacturer {
-    background-image: url(../img/icon-feature-5.svg);
-    background-position: 0 0;
+    background-image: url(../img/icon-feature-4.svg);
+    background-position: 0px 13px;
   }
   &--gift-package {
     background-image: url(../img/icon-feature-6.svg);
-    background-position: 0 0;
+    background-position: 5px 12px;
   }
 }
 @media @tablet-width {
   .about-us {
     .clearfix();
-    height: 640px;
+    height: 600px;
     width: 668px;
+    margin-bottom: 25px;
   }
   .about-us__title {
   text-align: left;
@@ -57,12 +59,13 @@
   .about-us__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 500px;
   }
   .about-us__item {
     width: 300px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
     font-size: 20px;
     line-height: 30px;
   }
