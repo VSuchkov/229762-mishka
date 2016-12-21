@@ -1,6 +1,6 @@
 .order-form {
   .container();
-  margin-bottom: 51px;
+  margin-bottom: 55px;
   }
 .order-form__type,
 .order-form__color,
@@ -30,7 +30,7 @@
 }
 .order-form__type {
   padding-top: 33px;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 }
 .order-form__color {
   padding-top: 25px;
@@ -194,7 +194,7 @@ input[type="checkbox"] {
   input[type="radio"] + label {
     display: block;
     position: relative;
-
+    padding-top: 2px;
     width: 160px;
     padding-left: 60px;
     cursor: pointer;
@@ -255,8 +255,25 @@ input[type="checkbox"] {
   .order-form__e-mail label,
   .order-form__comment label {
     position: absolute;
-    top: 57px;
     left: 0;
+  }
+  .order-form__type legend {
+    top: 40px;
+  }
+  .order-form__color legend {
+    top: 67px;
+  }
+  .order-form__name legend {
+    top: 56px;
+  }
+  .order-form__phone label {
+    top: 66px;
+  }
+  .order-form__e-mail label {
+    top: 37px;
+  }
+  .order-form__comment label {
+    top: 57px;
   }
   .order-form__type label,
   .order-form__color label,
@@ -438,6 +455,25 @@ input[type="checkbox"] {
   .order-form__phone label,
   .order-form__e-mail label,
   .order-form__comment label {
+    left: 112px;
+  }
+  .order-form__type legend {
+    top: 74px;
+  }
+  .order-form__color legend {
+    top: 67px;
+  }
+  .order-form__name legend {
+    top: 43px;
+  }
+  .order-form__phone label {
+    top: 67px;
+  }
+  .order-form__e-mail label {
+    top: 40px;
+  }
+  .order-form__comment label {
+    top: 58px;
   }
   .order-form__type label,
   .order-form__color label,
@@ -469,6 +505,7 @@ input[type="checkbox"] {
   }
   .order-form__name {
     width: 700px;
+    padding-top: 26px;
     & input {
       width: 575px;
       margin-left: 25px;
@@ -518,5 +555,14 @@ input[type="checkbox"] {
   .order-form__color label:nth-of-type(3n) {
     margin-right: 0;
   }
-
+  input[type="radio"] + label {
+    margin-bottom: 56px;
+  }
+  input[type="checkbox"]:checked + label::after {
+    top: 13px;
+    left: 9px;
+  }
+  input[type="checkbox"]:checked + label::after {
+    background-size: 32px 22px;
+  }
 }
