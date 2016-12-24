@@ -3,9 +3,11 @@
   width: 260px;
   height: 834px;
   padding-top: 40px;
+  position: relative;
 }
 .contacts__wrapper {
   margin-bottom: 5px;
+
 }
 .contacts__title {
   font-size: 18px;
@@ -32,6 +34,10 @@
   padding-right: 30px;
   vertical-align: top;
 }
+.contacts-info__e-mail-sign {
+  width: 82px;
+  padding: 0;
+}
 .contacts-info__adress-value {
   margin: 0;
 }
@@ -50,15 +56,23 @@
 .contacts__map {
   width: 320px;
   height: 457px;
-  background-color: #00FF00;
   margin-bottom: 40px;
   margin-left: -30px;
+}
+.contacts__map iframe {
+  width: 320px;
+  height: 457px;
 }
 @media @tablet-width {
   .contacts {
     width: 668px;
     padding-top: 20px;
     height: 861px;
+    & svg {
+      position: absolute;
+      top: 100px;
+      right: 0;
+    }
   }
   .contacts__title {
     text-align: left;
@@ -97,6 +111,10 @@
     margin-bottom: 55px;
     margin-left: -50px;
   }
+  .contacts__map iframe {
+    width: 768px;
+    height: 457px;
+  }
   .contacts .contacts__write {
     width: 228px;
     margin-left: auto;
@@ -109,6 +127,10 @@
     padding-left: 175px;
     padding-top: 80px;
     height: 520px;
+    & svg {
+      top: 100px;
+      left: 80px;
+    }
   }
   .contacts__title {
   margin-bottom: 47px;
@@ -124,7 +146,7 @@
     margin-bottom: 0;
   }
   .contacts-info__e-mail {
-    width: 267px;
+    width: 285px;
     margin-bottom: 30px;
   }
   .contacts-info__adress {
@@ -136,6 +158,10 @@
   }
   .contacts__map {
     float: right;
+    width: 525px;
+    height: 458px;
+  }
+  .contacts__map iframe {
     width: 525px;
     height: 458px;
   }

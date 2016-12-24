@@ -1,4 +1,7 @@
 .week-item {
+  width: 100%
+}
+.week-item__wrapper {
   .container();
   .clearfix();
   padding-top: 22px;
@@ -55,6 +58,12 @@
 }
 @media @tablet-width {
   .week-item {
+    min-height: 650px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+  }
+  .week-item__wrapper {
     width: 668px;
     height: 490px;
     padding-top: 50px;
@@ -115,6 +124,9 @@
 }
 @media @desktop-width {
   .week-item {
+    min-height: 830px;
+  }
+  .week-item__wrapper {
     height: 560px;
     padding-left: 175px;
     width: 875px;
