@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -20,12 +20,12 @@
           Открыть меню
         </button>
         <ul class="main-nav__items">
-          <li class="main-nav__item main-nav__item-catalog">
+          <li class="main-nav__item">
             <a>
               Каталог товаров
             </a>
           </li>
-          <li class="main-nav__item main-nav__item-order">
+          <li class="main-nav__item">
             <a href="form.html">
               Вязание на заказ
             </a>
@@ -137,7 +137,7 @@
             </div>
           <div class="catalog-items__text-wrapper">
             <h2 class="catalog-items__item-title">
-              Большая корзинка для игрушек
+              Большая корзина для игрушек
             </h2>
             <span class="catalog-items__description">
               Диаметр 30 см, высота 30 см
@@ -289,14 +289,17 @@
 
   <script>
     var popup = document.querySelector(".modal-form");
-    var price = document.querySelector(".catalog-items__price");
     var overlay = document.querySelector(".modal-overlay");
+    var price_list = document.querySelectorAll(".catalog-items__price");
 
-    price.addEventListener('click', function(event) {
-      event.preventDefault();
-      popup.classList.add("modal-form-show");
-      overlay.classList.add("modal-overlay-show");
-    });
+    for (var i = 0; i < price_list.length; i++) {
+      price_list[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        popup.classList.add("modal-form-show");
+        overlay.classList.add("modal-overlay-show");
+       });
+    }
+
     overlay.addEventListener("click", function(event) {
       event.preventDefault();
       popup.classList.remove("modal-form-show");
