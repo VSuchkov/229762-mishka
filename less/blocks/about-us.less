@@ -1,0 +1,99 @@
+.about-us {
+  .container();
+  padding-top: 8px;
+  height: 796px;
+}
+.about-us__title {
+    font-size: 25px;
+    line-height: 1.2em;
+    font-weight: bold;
+  }
+.about-us__item {
+    height: 59px;
+    padding-top: 64px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+  }
+.about-us__item {
+  background-repeat: no-repeat;
+  &--materials {
+    background-image: url(../img/icon-feature-1.svg);
+    background-position: 9px 10px;
+
+  }
+  &--russian-price {
+    background-image: url(../img/icon-feature-3.svg);
+    background-position: 1px 11px;
+  }
+  &--likes {
+    background-image: url(../img/icon-feature-5.svg);
+    background-position: 9px 15px;
+  }
+  &--hand-made {
+    background-image: url(../img/icon-feature-2.svg);
+    background-position: 5px 13px;
+  }
+  &--our-manufacturer {
+    background-image: url(../img/icon-feature-4.svg);
+    background-position: 0px 13px;
+    background-position: 5px 15px;
+    padding-left: 10px;
+    margin-left: -10px;
+  }
+  &--gift-package {
+    background-image: url(../img/icon-feature-6.svg);
+    background-position: 5px 12px;
+  }
+}
+@media @tablet-width {
+  .about-us {
+    .clearfix();
+    height: 600px;
+    width: 668px;
+    margin-bottom: 33px;
+  }
+  .about-us__title {
+  text-align: left;
+  font-size: 43px;
+  line-height: 50px;
+  font-size: 43px;
+  margin-top: 43px;
+  margin-bottom: 38px;
+  }
+  .about-us__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+  }
+  .about-us__item {
+    width: 300px;
+    height: 50px;
+    padding-top: 63px;
+    margin-bottom: 42px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media @desktop-width {
+  .about-us {
+    padding-left: 175px;
+    padding-right: 175px;
+    width: 730px;
+    margin-bottom: 44px;
+  }
+  .about-us__title {
+  font-size: 53px;
+  line-height: 57px;
+  margin-bottom: 40px;
+  }
+  .about-us__item {
+    margin-bottom: 42px;
+    line-height: 22px;
+  }
+  .about-us__items {
+    width: 698px;
+    padding-left: 14px;
+  }
+}

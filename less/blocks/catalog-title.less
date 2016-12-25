@@ -1,0 +1,53 @@
+.catalog-title {
+  width: 100%;
+  background-color: #f1f1f1;
+  min-height: 115px;
+
+}
+.catalog-title__wrapper {
+  .container();
+  height: 103px;
+  width: 320px;
+  font-size: 27px;
+  line-heght: 30px;
+  font-weight: bold;
+  padding-top: 73px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+@media @tablet-width {
+  .catalog-title {
+    border-top: 1px #ececec solid;
+    background-image: url(../img/bg-zigzag-fill.svg);
+    background-repeat: repeat-x;
+    background-position: 17px bottom;
+    min-height: 170px;
+    margin-top: -67px;
+    background-size: 768px;
+  }
+  .catalog-title__wrapper {
+  min-height: 129px;
+  width: 668px;
+  font-size: 43px;
+  line-heght: 50px;
+  padding-top: 105px;
+  margin-bottom: 67px;
+}
+
+}
+@media @desktop-width {
+  .catalog-title {
+    min-height: 200px;
+    margin-top: 0;
+    background-size: 1150px;
+    background-position: 14px bottom;
+  }
+  .catalog-title__wrapper {
+    width: 1050px;
+    font-size: 53px;
+    line-heght: 57px;
+    min-height: 162px;
+    padding-top: 107px;
+    margin-bottom: 111px;
+  }
+}

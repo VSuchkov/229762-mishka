@@ -71,8 +71,8 @@
         </div>
       </header>
     <main>
-      <div class="page-title">
-        <h1 class="page-title__wrapper">
+      <div class="catalog-title">
+        <h1 class="catalog-title__wrapper">
           Каталог товаров
         </h1>
       </div>
@@ -289,14 +289,17 @@
 
   <script>
     var popup = document.querySelector(".modal-form");
-    var price = document.querySelector(".catalog-items__price");
     var overlay = document.querySelector(".modal-overlay");
+    var price_list = document.querySelectorAll(".catalog-items__price");
 
-    price.addEventListener('click', function(event) {
-      event.preventDefault();
-      popup.classList.add("modal-form-show");
-      overlay.classList.add("modal-overlay-show");
-    });
+    for (var i = 0; i < price_list.length; i++) {
+      price_list[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        popup.classList.add("modal-form-show");
+        overlay.classList.add("modal-overlay-show");
+      });
+    }
+
     overlay.addEventListener("click", function(event) {
       event.preventDefault();
       popup.classList.remove("modal-form-show");
