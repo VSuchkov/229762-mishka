@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -20,12 +20,12 @@
           Открыть меню
         </button>
         <ul class="main-nav__items">
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item-catalog">
             <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item-order">
             <a href="form.html">
               Вязание на заказ
             </a>
@@ -138,22 +138,32 @@
         </h2>
         <div class="about-us__items">
           <div class="about-us__item about-us__item--materials">
-            Экологически чистые материалы
+            Экологически
+            <br>
+            чистые материалы
           </div>
           <div class="about-us__item about-us__item--russian-price">
-            Скандинавский стиль по российской цене
+            Скандинавский стиль
+            <br>
+            по российской цене
           </div>
           <div class="about-us__item about-us__item--likes">
-            Увеличивает лайки на фотографиях
+            Увеличивает лайки
+            <br>
+            на фотографиях
           </div>
           <div class="about-us__item about-us__item--hand-made">
-            Связано вручную с любовью и умилением
+            Связано вручную с
+            <br>
+            любовью и умилением
           </div>
           <div class="about-us__item about-us__item--our-manufacturer">
             Поддержка отечественного производителя
           </div>
           <div class="about-us__item about-us__item--gift-package">
-            Поставляется в подарочной упаковке
+            Поставляется в
+            <br>
+            подарочной упаковке
           </div>
         </div>
       </div>
@@ -219,7 +229,9 @@
             <p class="contacts-info__adress-value">
               г. Санкт-Петербург,
               <br>
-              ул. Большая Конюшенная, д. 19/8, офис 101
+              ул. Большая Конюшенная,
+              <br>
+              д. 19/8, офис 101
             </p>
           </div>
         </div>
@@ -309,6 +321,30 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
+  </script>
+  <script>
+    var popup = document.querySelector(".modal-form");
+    var price = document.querySelector(".catalog-items__price");
+    var overlay = document.querySelector(".modal-overlay");
+
+    price.addEventListener('click', function(event) {
+      event.preventDefault();
+      popup.classList.add("modal-form-show");
+      overlay.classList.add("modal-overlay-show");
+    });
+    overlay.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("modal-form-show");
+      overlay.classList.remove("modal-overlay-show");
+    });
+    window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+        if (popup.classList.contains("modal-form-show")) {
+          popup.classList.remove("modal-form-show");
+          overlay.classList.remove("modal-overlay-show");
+          }
+        }
+      });
   </script>
   </body>
 </html>
