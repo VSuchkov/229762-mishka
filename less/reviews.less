@@ -1,7 +1,10 @@
 .reviews {
+  width: 100%;
+}
+.reviews__wrapper {
   .container();
   width: 260px;
-  height: 550px;
+  min-height: 550px;
   padding-top: 30px;
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -76,6 +79,12 @@
 }
 @media @tablet-width {
   .reviews {
+    min-height: 600px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+  }
+  .reviews__wrapper {
     .container();
     .clearfix();
     position: relative;
@@ -136,7 +145,7 @@
   }
 }
 @media @desktop-width {
-  .reviews {
+  .reviews__wrapper {
     .container();
     padding-top: 72px;
     padding-bottom: 70px;
@@ -152,5 +161,4 @@
     margin-bottom: 10px;
     font-size: 17px;
   }
-
 }

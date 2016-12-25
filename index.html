@@ -7,14 +7,15 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <div class="page-header__wrapper">
+        <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <a class="page-header__logo">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" " alt="Мишка">
+          <img src="img/logo-mobile.svg"alt="Мишка">
         </picture>
-      </a>
-      <nav class="main-nav  main-nav--closed main-nav--nojs">
+        </a>
         <button class="main-nav__toggle" type="button">
           Открыть меню
         </button>
@@ -29,14 +30,21 @@
               Вязание на заказ
             </a>
           </li>
-          <li class="main-nav__item main-nav__item--only-desktop">
-            <a href="form.html">
+        </ul>
+        <ul class="main-nav__additive">
+          <li class="main-nav__item">
+            <a>
               Новые поступления
             </a>
           </li>
-          <li class="main-nav__item main-nav__item--only-desktop">
-            <a href="form.html">
+          <li class="main-nav__item">
+            <a>
               Распродажа
+            </a>
+          </li>
+          <li class="main-nav__item  main-nav__item--delivery">
+            <a>
+              Бесплатная доставка по России
             </a>
           </li>
         </ul>
@@ -59,10 +67,8 @@
             </a>
           </li>
           </ul>
-          <a class="main-nav__delivery main-nav__delivery--mobile-hidden" >
-            Бесплатная доставка по России
-          </a>
         </nav>
+        </div>
       </header>
       <main>
         <div class="features">
@@ -72,53 +78,59 @@
             <br>
             работы для дома
           </h1>
-          <a class="features__item features__item--home-furnishings" href="#">
-            Предметы интерьера
-          </a>
-          <a class="features__item  features__item--kids-toys" href="#">
-            Детские игрушки
-          </a>
+
+            <a class="features__item features__item--home-furnishings" href="#">
+              Предметы интерьера
+              <img src="img/icon-interior.svg">
+            </a>
+            <a class="features__item  features__item--kids-toys" href="#">
+              Детские игрушки
+              <img src="img/icon-toy.svg">
+            </a>
+
           </div>
       </div>
       <div class="week-item">
-        <h2 class="week-item__name">
-          Вязаные корзинки
-        </h2>
-        <b class="week-item__sign">
-          Товар недели
-        </b>
-        <p class="week-item__descr">
-          Экологически чистая пряжа, ручная работа. Доступна в шести расцветках, и трех размерах.
-        </p>
-        <table class="week-item__table">
-          <tr>
-            <td class="week-item__specification">
+        <div class="week-item__wrapper">
+          <h2 class="week-item__name">
+            Вязаные корзинки
+          </h2>
+          <b class="week-item__sign">
+            Товар недели
+          </b>
+          <p class="week-item__descr">
+            Экологически чистая пряжа, ручная работа. Доступна в шести расцветках, и трех размерах.
+          </p>
+          <table class="week-item__table">
+            <tr>
+              <td class="week-item__specification">
               Цвет:
             </td>
-            <td class="week-item__specification-value">&#171Тиффани&#187/cерый</td>
-          </tr>
-          <tr>
-            <td class="week-item__specification">Диаметр:</td>
-            <td class="week-item__specification-value">25 см</td>
-          </tr>
-          <tr>
-            <td class="week-item__specification">Высота:</td>
-            <td class="week-item__specification-value">15 см</td>
-          </tr>
-        </table>
-        <div class="week-item__img-wrapper">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img src="img/triple-set-mobile@1x.jpg 1x" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" class="week-item__img">
-          </picture>
+              <td class="week-item__specification-value">&#171Тиффани&#187/cерый</td>
+            </tr>
+            <tr>
+              <td class="week-item__specification">Диаметр:</td>
+              <td class="week-item__specification-value">25 см</td>
+            </tr>
+            <tr>
+              <td class="week-item__specification">Высота:</td>
+              <td class="week-item__specification-value">15 см</td>
+            </tr>
+          </table>
+          <div class="week-item__img-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg 1x" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" class="week-item__img">
+            </picture>
+          </div>
+          <b class="week-item__price">
+            Цена: 990 руб.
+          </b>
+          <a href="#" class="week-item__order btn">
+            Заказать
+          </a>
         </div>
-        <b class="week-item__price">
-          Цена: 990 руб.
-        </b>
-        <a href="#" class="week-item__order btn">
-          Заказать
-        </a>
       </div>
       <div class="about-us">
         <h2 class="about-us__title">
@@ -146,34 +158,50 @@
         </div>
       </div>
       <div class="reviews">
-        <h2 class="reviews__title">
-          Отзывы
-        </h2>
-        <blockquote class="reviews__item">
-          <p class="reviews__text">
-            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-          </p>
-          <cite class="reviews__authors-name">
-            Анастасия Красильникова
-            <br>
-            <span class="reviews__authors-contact">
+        <div class="reviews__wrapper">
+          <h2 class="reviews__title">
+            Отзывы
+          </h2>
+          <blockquote class="reviews__item">
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <cite class="reviews__authors-name">
+              Анастасия Красильникова
+              <br>
+              <span class="reviews__authors-contact">
               @misssssiskras
-            </span>
-          </cite>
-        </blockquote>
-        <div class="reviews__paginator">
-          <a href="#" class="reviews__prev">
-            Предыдущий отзыв
-          </a>
-          <a href="#" class="reviews__next">
-            Следующий отзыв
+              </span>
+            </cite>
+          </blockquote>
+          <div class="reviews__paginator">
+            <a href="#" class="reviews__prev">
+              Предыдущий отзыв
+            </a>
+            <a href="#" class="reviews__next">
+              Следующий отзыв
+            </a>
+          </div>
+          <a href="#" class="reviews__write btn" >
+            Написать
           </a>
         </div>
-        <a href="#" class="reviews__write btn" >
-          Написать
-        </a>
       </div>
       <div class="contacts">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.68px" height="81.691px" viewBox="-11.34 -28.346 46.68 81.691" enable-background="new -11.34 -28.346 46.68 81.691" xml:space="preserve">
+            <g id="miu">
+              <g id="Artboard-1" transform="translate(-755.000000, -443.000000)">
+                <g id="slice" transform="translate(215.000000, 119.000000)">
+                </g>
+              <g id="editor-flag-triangle-notification-glyph">
+                <path fill="#63D1BB" d="M751.439,418.545v38.9l38.9-19.451L751.439,418.545z M743.66,496.346v-81.691h3.805v81.691H743.66z"/>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect x="-11.34" y="-28.346" fill="#231F20" width="3.805" height="81.691"/>
+          </g>
+        </svg>
         <div class="contacts__wrapper">
         <h2 class="contacts__title">
           Контакты
@@ -197,8 +225,9 @@
         </div>
         </div>
         <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365163!2d30.320894616030944!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1482589862215" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <a class="contacts__write btn" href="">
+        <a class="contacts__write btn" href="#">
           Напишите нам
         </a>
       </div>

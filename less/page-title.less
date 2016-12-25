@@ -1,4 +1,9 @@
 .page-title {
+  width: 100%;
+  background-color: #f1f1f1;
+  min-height: 115px;
+}
+.page-title__wrapper {
   .container();
   height: 103px;
   width: 320px;
@@ -7,22 +12,33 @@
   font-weight: bold;
   padding-top: 73px;
   text-align: center;
-  background-color: #f1f1f1;
   margin-bottom: 30px;
 }
 @media @tablet-width {
   .page-title {
-  height: 115px;
+    border-top: 1px #ececec solid;
+    background-image: url(../img/bg-zigzag-fill.svg);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    min-height: 170px;
+    margin-top: -67px;
+  }
+  .page-title__wrapper {
+  min-height: 115px;
   width: 668px;
   font-size: 43px;
   line-heght: 50px;
-  padding-top: 39px;
+  padding-top: 80px;
   margin-bottom: 80px;
 }
 
 }
 @media @desktop-width {
   .page-title {
+    min-height: 200px;
+    margin-top: 0;
+  }
+  .page-title__wrapper {
     width: 1050px;
     font-size: 53px;
     line-heght: 57px;
