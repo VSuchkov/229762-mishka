@@ -1,17 +1,20 @@
 .week-item {
-  width: 100%
+  width: 100%;
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-repeat: repeat-x;
+  background-position: -6px bottom;
+  background-size: 319px;
 }
 .week-item__wrapper {
   .container();
   .clearfix();
-  padding-top: 22px;
-  padding-bottom: 36px;
+  padding-top: 7px;
+  padding-bottom: 40px;
 }
 .week-item__name {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
-  letter-spacing: 1px;
   margin-bottom: 6px;
 }
 .week-item__sign {
@@ -29,7 +32,6 @@
   line-height: 24px;
   color: #444444;
   margin-bottom: 18px;
-  letter-spacing: 0.5px;
 }
 .week-item__table {
   width: 260px;
@@ -43,7 +45,7 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  margin-top: 16px;
+  margin-top: 18px;
   margin-bottom: 26px;
   text-align: center;
 }
@@ -58,15 +60,14 @@
 }
 @media @tablet-width {
   .week-item {
-    min-height: 650px;
-    background-image: url(../img/bg-zigzag-line.svg);
-    background-repeat: repeat-x;
-    background-position: 0 bottom;
+    min-height: 612px;
+    background-position: 48px bottom;
+    background-size: 769px;
   }
   .week-item__wrapper {
     width: 668px;
     height: 490px;
-    padding-top: 50px;
+    padding-top: 33px;
     padding-bottom: 50px;
     margin-bottom: 39px;
   }
@@ -104,9 +105,10 @@
   .week-item__price {
     float: left;
     font-size: 20px;
-    width: 290px;
+    width: 296px;
     text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 34px;
+    margin-top: 16px;
   }
   .week-item__order {
     float: left;
@@ -117,6 +119,7 @@
   }
   .week-item__specification-value {
     width: 217px;
+    padding-left: 12px;
   }
   .week-item .week-item__order {
     width: 288px;
@@ -124,7 +127,10 @@
 }
 @media @desktop-width {
   .week-item {
-    min-height: 830px;
+    min-height: 757px;
+    background-position: 32px bottom;
+    background-size: 1150px;
+    margin-bottom: 10px;
   }
   .week-item__wrapper {
     height: 560px;
@@ -141,7 +147,7 @@
   }
   .week-item__name {
     position: relative;
-    width: 525px;
+    width: 540px;
     margin-bottom: 48px;
     font-size: 53px;
     line-height: 57px;

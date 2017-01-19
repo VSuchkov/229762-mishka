@@ -35,7 +35,7 @@
 }
 .order-form__type {
   padding-top: 33px;
-  margin-bottom: 13px;
+  margin-bottom: 3px;
 }
 .order-form__color {
   padding-top: 25px;
@@ -74,6 +74,9 @@
   margin-bottom: 33px;
   padding-top: 10px;
 }
+.order-form__color-wrapper {
+  margin-top: -5px;
+}
 .order-form__name,
 .order-form__phone,
 .order-form__e-mail {
@@ -96,6 +99,14 @@
 }
 .order-form__name {
   margin-bottom: 10px;
+  & input {
+    letter-spacing: 1.2px;
+  }
+}
+.order-form__phone {
+  & input {
+    margin-bottom: 20px;
+  }
 }
 .order-form__phone,
 .order-form__e-mail {
@@ -105,18 +116,18 @@
   margin-bottom: 10px;
 }
 .order-form__phone {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .order-form__phone-icon {
   position: absolute;
   top: 37px;
-  left: 86%;
+  left: 88%;
   z-index: 10;
 }
 .order-form__e-mail-icon {
   position: absolute;
   top: 37px;
-  left: 85%;
+  left: 87%;
   z-index: 10;
 }
 .order-form__e-mail-icon path,
@@ -129,6 +140,7 @@
 .order-form__phone-input {
   margin-top: 5px;
 }
+
 .order-form__e-mail-input:hover ~ .order-form__e-mail-icon path,
 .order-form__phone-input:hover ~ .order-form__phone-icon path,
 .order-form__e-mail-input:focus ~ .order-form__e-mail-icon path,
@@ -145,6 +157,9 @@
   line-height: 16px;
   color: #444444;
   margin-bottom: 30px;
+}
+.order-form__button {
+  width: 260px;
 }
 .order-form__comment {
   margin-bottom: 13px;
@@ -169,7 +184,7 @@ input[type="checkbox"] {
     display: block;
     position: relative;
     width: 160px;
-    padding-left: 60px;
+    padding-left: 64px;
     cursor: pointer;
   }
   input[type="checkbox"] + label::before {
@@ -187,6 +202,12 @@ input[type="checkbox"] {
     border: 2px #62d1ba solid;
   }
   input[type="checkbox"] + label:active::before {
+    border: 2px #c7c7c7 solid;
+  }
+  input[type="radio"] + label:hover::before {
+    border: 2px #62d1ba solid;
+  }
+  input[type="radio"] + label:active::before {
     border: 2px #c7c7c7 solid;
   }
   input[type="checkbox"]:checked + label::after {
@@ -208,8 +229,9 @@ input[type="checkbox"] {
     position: relative;
     padding-top: 2px;
     width: 160px;
-    padding-left: 60px;
+    padding-left: 64px;
     cursor: pointer;
+    height: 35px;
   }
   input[type="radio"] + label::before {
     content: "";
@@ -220,8 +242,8 @@ input[type="checkbox"] {
     border: 2px #000000 solid;
     background-color: #ffffff;
     position: absolute;
-    top: -10px;
-    left: -2px;
+    top: -9px;
+    left: 1px;
   }
   input[type="radio"]:checked + label::after {
     content: "";
@@ -230,8 +252,8 @@ input[type="checkbox"] {
     width: 16px;
     height: 16px;
     background-color: #62d1ba;
-    top: 1px;
-    left: 10px;
+    top: 3px;
+    left: 13px;
   }
 
 @media @tablet-width {
@@ -258,12 +280,16 @@ input[type="checkbox"] {
   .order-form__phone-wrapper {
     background-color: #f1f1f1;
   }
+  .order-form__color-wrapper {
+    margin-top: 0;
+  }
   .order-form__color {
     display: block;
     height: 205px;
     padding: 50px;
     padding-left: 168px;
     background-color: #f1f1f1;
+    margin-left: 120px;
   }
   .order-form__type legend,
   .order-form__color legend,
@@ -275,7 +301,7 @@ input[type="checkbox"] {
     left: 0;
   }
   .order-form__type legend {
-    top: 40px;
+    top: 37px;
   }
   .order-form__color legend {
     top: 67px;
@@ -346,11 +372,14 @@ input[type="checkbox"] {
     height: 244px;
     padding-top: 40px;
     & input {
-      width: 375px;
-      margin-left: 21px;
+      width: 356px;
+      margin-left: 26px;
+      font-size: 19px;
+      padding-left: 18px;
+      letter-spacing: 0;
     }
     & input:first-of-type {
-      width: 429px;
+      width: 408px;
     }
   }
   .order-form__phone,
@@ -358,8 +387,10 @@ input[type="checkbox"] {
     padding-top: 0;
     padding-bottom: 0;
     & input {
-      width: 500px;
+      width: 484px;
       background-color: #f1f1f1;
+      padding-left: 17px;
+      font-size: 19px;
     }
   }
   .order-form__phone {
@@ -371,18 +402,11 @@ input[type="checkbox"] {
   .order-form__e-mail {
     padding-bottom: 50px;
     padding-top: 16px;
-    padding-right: 12px;
     height: 56px;
     background-color: #f1f1f1;
   }
-  .order-form__required-fields {
-    font-size: 17px;
-    line-height: 30px;
-    color: #444444;
-    margin-bottom: 30px;
-  }
   .order-form__comment {
-    margin-bottom: 50px;
+    margin-bottom: 54px;
     padding-top: 20px;
     & textarea {
       height: 138px;
@@ -391,15 +415,19 @@ input[type="checkbox"] {
   }
   .order-form__required-fields {
       float: right;
-      margin-top: 10px;
+      margin-top: 8px;
+      font-size: 17px;
+      line-height: 30px;
+      color: #444444;
+      margin-bottom: 30px;
   }
   .order-form__phone-icon {
     top: 61px;
-    left: 92%;
+    left: 93%;
   }
   .order-form__e-mail-icon {
     top: 33px;
-    left: 90%;
+    left: 92%;
   }
   .order-form__button {
     width: 232px;
@@ -413,20 +441,19 @@ input[type="checkbox"] {
   input[type="radio"] + label {
     width: 255px;
     padding-left: 80px;
-    margin-bottom: 58px;
+    margin-bottom: 40px;
   }
   input[type="radio"] + label::before {
     width: 48px;
     height: 48px;
-    top: -16px;
-    left: -2px;
+    top: -12px;
+    left: 1px;
   }
   input[type="radio"]:checked + label::after {
     width: 20px;
     height: 20px;
-    top: 0px;
-    left: 15px;
-
+    top: 3px;
+    left: 16px;
   }
   input[type="checkbox"] + label::before {
     width: 50px;
@@ -455,13 +482,13 @@ input[type="checkbox"] {
   .order-form__comment {
     .clearfix();
     width: 650px;
-    padding-left: 225px;
+    padding-left: 125px;
     padding-right: 175px;
   }
   .order-form__color {
     height: 128px;
     padding: 50px;
-    padding-left: 225px;
+    padding-left: 163px;
     padding-right: 0;
     width: 825px;
     background-color: #f1f1f1;
@@ -475,34 +502,37 @@ input[type="checkbox"] {
   .order-form__comment label {
     left: 112px;
   }
+  .order-form__type {
+    margin-bottom: 15px;
+  }
   .order-form__type legend {
     top: 74px;
+    left: 15px;
   }
   .order-form__color legend {
     top: 67px;
+    left: 48px;
   }
   .order-form__name legend {
     top: 43px;
+    left: 8px;
   }
   .order-form__phone label {
     top: 67px;
+    left: 30px;
   }
   .order-form__e-mail label {
     top: 40px;
+    left: 29px;
   }
   .order-form__comment label {
     top: 58px;
+    left: 15px;
   }
   .order-form__type label,
   .order-form__color label,
   .order-form__name label,
   .order-form__contacts label {
-  }
-  .order-form__color label {
-    width: 180px;
-  }
-  .order-form__type label,
-  .order-form__color label {
   }
   .order-form__type {
     padding-top: 72px;
@@ -524,22 +554,27 @@ input[type="checkbox"] {
   .order-form__name {
     width: 700px;
     padding-top: 26px;
+    padding-right: 117px;
     & input {
-      width: 574px;
+      width: 555px;
       margin-left: 25px;
     }
     & input:first-of-type {
-      width: 626px;
+      width: 607px;
     }
   }
 
   .order-form__phone,
   .order-form__e-mail {
+    padding-right: 140px;
     & input {
-      width: 700px;
+      width: 690px;
+      margin-left: 20px;
+      padding-left: 10px;
     }
   }
   .order-form__comment {
+    padding-right: 125px;
     margin-bottom: 46px;
     & textarea {
       height: 138px;
@@ -547,20 +582,21 @@ input[type="checkbox"] {
     }
   }
   .order-form__required-fields {
-      margin-right: 122px;
+      margin-right: 172px;
       color: #444444;
       margin-bottom: 30px;
+      margin-top: 11px;
   }
   .order-form__button {
-    margin-left: 223px;
+    margin-left: 174px;
   }
   .order-form__phone-icon {
     top: 60px;
-    left: 81%;
+    left: 82%;
   }
   .order-form__e-mail-icon {
     top: 32px;
-    left: 81%;
+    left: 82%;
   }
   .order-form__color label {
     margin-right: 20px;
@@ -573,11 +609,14 @@ input[type="checkbox"] {
   .order-form__color label:nth-of-type(3n) {
     margin-right: 0;
   }
+  input[type="checkbox"] + label {
+    width: 163px;
+  }
   input[type="radio"] + label {
-    margin-bottom: 56px;
+    margin-bottom: 37px;
   }
   input[type="checkbox"]:checked + label::after {
-    top: 13px;
-    left: 9px;
+    top: 15px;
+    left: 11px;
   }
 }

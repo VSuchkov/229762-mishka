@@ -1,9 +1,10 @@
-.page-title {
+.form-title {
   width: 100%;
   background-color: #f1f1f1;
   min-height: 115px;
+
 }
-.page-title__wrapper {
+.form-title__wrapper {
   .container();
   height: 103px;
   width: 320px;
@@ -12,38 +13,41 @@
   font-weight: bold;
   padding-top: 73px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 @media @tablet-width {
-  .page-title {
+  .form-title {
     border-top: 1px #ececec solid;
     background-image: url(../img/bg-zigzag-fill.svg);
     background-repeat: repeat-x;
-    background-position: 0 bottom;
+    background-position: -7px bottom;
     min-height: 170px;
     margin-top: -67px;
+    background-size: 768px;
   }
-  .page-title__wrapper {
-  min-height: 115px;
+  .form-title__wrapper {
+  min-height: 132px;
   width: 668px;
   font-size: 43px;
   line-heght: 50px;
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 102px;
+  margin-bottom: 60px;
 }
 
 }
 @media @desktop-width {
-  .page-title {
+  .form-title {
     min-height: 200px;
     margin-top: 0;
+    background-size: 1150px;
+    background-position: 0 bottom;
   }
-  .page-title__wrapper {
+  .form-title__wrapper {
     width: 1050px;
     font-size: 53px;
     line-heght: 57px;
-    height: 140px;
-    padding-top: 111px;
-    margin-bottom: 130px;
+    min-height: 162px;
+    padding-top: 107px;
+    margin-bottom: 103px;
   }
 }
